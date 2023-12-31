@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """ Starts a Flask web application.
 
@@ -19,7 +20,8 @@ def hello_hbnb():
     return 'Hello HBNB!'
 
 
-@app.route('/hbnb', strict_slashes=False) def hbnb():
+@app.route('/hbnb', strict_slashes=False)
+def hbnb():
     """ A function that returns the string 'HBNB'.
     """
     return 'HBNB'
@@ -33,3 +35,5 @@ def my_text(text):
     return 'C ' + str(text.replace('_', ' '))
 
 
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
