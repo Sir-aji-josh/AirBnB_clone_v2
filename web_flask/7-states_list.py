@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-""" Starts a Flask web application.
-
+""" A script thats Starts a Flask web application.
 The application listens on 0.0.0.0, port 5000.
-Routes:
-    /states_list: HTML page with a list of all State objects in DBStorage.
 """
-
 from flask import Flask, render_template
 from models import storage
 from models.state import State
@@ -25,9 +21,7 @@ def close_storage(exc):
 def states_list():
     """
     Display a HTML page: (inside the tag BODY)
-    - displays all State objects in DBStorage.
-
-    States are sorted by name.
+    - displays all State objects in DBStorage
     """
     states = storage.all(State).values()
     return render_template("7-states_list.html", states=states)
