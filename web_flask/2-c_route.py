@@ -1,35 +1,28 @@
-
 #!/usr/bin/python3
-""" Starts a Flask web application.
+""" A script thats starts a Flask web application.
 
-The application listens on 0.0.0.0, port 5000.
-Routes:
-    /: Displays 'Hello HBNB!'.
-    /hbnb: Displays 'HBNB'.
-    /c/<text>: Displays 'C' followed by the value of <text>.
 """
-
 from flask import Flask
 app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
-    """ A function that returns the string 'Hello HBNB!'.
+    """ a function that returns the string 'Hello HBNB!'.
     """
     return 'Hello HBNB!'
 
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    """ A function that returns the string 'HBNB'.
+    """ a function that returns the string 'HBNB'.
     """
     return 'HBNB'
 
 
 @app.route('/c/<text>', strict_slashes=False)
 def my_text(text):
-    """ A function that display 'C' followed by the value
+    """a function that display 'C' followed by the value
     of the text variable.
     """
     return 'C ' + str(text.replace('_', ' '))
