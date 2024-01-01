@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """ A script thats Starts a Flask web application.
-The application listens on 0.0.0.0, port 5000.
 """
 from flask import Flask, render_template
 from models import storage
 from models.state import State
-
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
