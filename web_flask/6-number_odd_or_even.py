@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ A script thats starts a Flask web application.
 """
-
 from flask import Flask, render_template
+
 app = Flask(__name__)
 
 
@@ -63,9 +63,7 @@ def number_template_n(n):
 def number_odd_or_even(n):
     """ Displays a HTML page only if n is an integer.
     """
-    n_type = 'even' 
-    if n % 2 == 0 
-    else 'odd'
+    n_type = 'even' if n % 2 == 0 else 'odd'
     return render_template('6-number_odd_or_even.html', n=n, n_type=n_type)
 
 
