@@ -2,7 +2,6 @@
 """ A script thats starts a Flask web application.
 """
 from flask import Flask
-
 app = Flask(__name__)
 
 
@@ -23,7 +22,7 @@ def hbnb():
 @app.route('/c/<text>', strict_slashes=False)
 def c_text(text):
     """
-    a function that display 'C' followed by the value
+    A function that display 'C' followed by the value
     of the text variable.
     """
     return "C " + str(text.replace('_', ' '))
@@ -39,7 +38,7 @@ def python_default_text():
 @app.route('/python/<text>', strict_slashes=False)
 def python_text(text):
     """
-    a function that displays 'Python',
+    A function that displays 'Python',
     followed by the value of the text variable
     """
     return "Python " + str(text.replace('_', ' '))
@@ -47,5 +46,3 @@ def python_text(text):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-
-
